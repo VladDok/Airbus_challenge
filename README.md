@@ -1,7 +1,7 @@
 # Airbus Challenge
 
 Технічним завданням є створення конвертаційної нейронної моделі, яка здатна сегментувати зображення. Прикладом зображення є знімки Airbus, які були дропнуті на дрібніші фото для подальшої роботи. \
-![alt text](https://github.com/[VladDok]/[Airbus_challenge]/blob/[branch]/ship.png?raw=true)
+![alt text](https://github.com/[VladDok]/[Airbus_challenge]/blob/[main]/ship.png?raw=true)
 
 Метою моделі є сегментація кораблів на знімках.
 
