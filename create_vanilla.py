@@ -1,7 +1,7 @@
 #Для створення згорткової мережі використовується схема Vanilla Unet.
 class CreateVanilla:
     
-    def __init__(self, input_layer=Input(shape=(256, 256, 3)), in_m=8, kernel_size=(3, 3), drop_out=0.5):
+    def __init__(self, input_layer=Input(shape=(256, 256, 3)), in_m=8, kernel_size=(3, 3), drop_out=0.25):
         self.input_layer_ = input_layer
         self.in_ = in_m
         self.kernel_size_ = kernel_size
@@ -40,7 +40,7 @@ class CreateVanilla:
         conv_1 = Conv2D(in_ * 1, kernel_size, activation="relu", padding="same")(input_layer)
         conv_1 = Conv2D(in_ * 1, kernel_size, activation="relu", padding="same")(conv_1)
         pool_1 = MaxPooling2D((2, 2))(conv_1)
-        pool_1 = Dropout(drop_out)(pool_1)
+        pool_1 = Dropout(0.2)(pool_1)
         
         conv_2 = Conv2D(in_ * 2, kernel_size, activation="relu", padding="same")(pool_1)
         conv_2 = Conv2D(in_ * 2, kernel_size, activation="relu", padding="same")(conv_2)
